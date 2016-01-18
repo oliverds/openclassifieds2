@@ -10,13 +10,15 @@ ul.dropdown-menu {
 			line-height:40px;
 			height:40px;
 			color:$text-color;
+			background:$text-color-lighter;
 			.fa {
 				width:18px;
 				color:$text-color;
 			}
 			&:hover, &:focus {
+				background:$text-color-lighter;
 				.fa {
-					color:#262626;
+					color:$brand-primary;
 				}
 			}
 		}
@@ -25,27 +27,41 @@ ul.dropdown-menu {
 
 .sidebar-nav {
 	li {
-		background:$text-color-lighter;
+		//background:$text-color-lighter;
+		background:$custom-gray;
 		font-weight:700;
 		position:relative;
+		//border-bottom: 1px solid #e7e7e7;
+		&.active {
+			//background-color: #eee;
+			a:before {
+				content:"";
+				height:100%;
+				position:absolute;
+				width:5px;
+				left:-5px;
+				background:$brand-primary;
+				top:0;
+			}
+			.nav-second-level a:before {
+				display:none;
+			}
+			.icon:before { 
+		    	content: "\f068";
+		    	font-family: FontAwesome;
+			    font-style: normal;
+			    font-weight: normal;
+			    text-decoration: inherit;
+			    font-size:12px;
+		    }
+		}
 		a {
 			color:$text-color;
 			position:relative;
 			padding:15px 15px 15px 45px;
 			&:hover, &:focus, &.active {
 				color:$brand-primary;
-				font-size:700;
-			}
-			&.active {
-				&:before {
-					content:"";
-					height:100%;
-					position:absolute;
-					width:5px;
-					left:-5px;
-					background:$brand-primary;
-					top:0;
-				}
+				background:$custom-gray;
 			}
 			i {
 				margin-right:15px;
@@ -57,7 +73,8 @@ ul.dropdown-menu {
 		}
 	}
 	#collapse-menu {
-		background:$white;
+		//background:$white;
+		background:$custom-gray;
 		border:none;
 		cursor:pointer;
 		padding:13px 15px;
@@ -66,31 +83,37 @@ ul.dropdown-menu {
 			margin-right:15px; 
 		}
 	}
-	.arrow { 
+	.icon { 
 	    float: right;
 	    &:before { 
-	    	content: "\f105"; 
+	    	content: "\f067";
+	    	font-family: FontAwesome;
+		    font-style: normal;
+		    font-weight: normal;
+		    text-decoration: inherit;
+		    font-size:12px;
 	    }
 	}
 	.nav-second-level {
 		z-index:99 !important;
 	}
 	.nav-second-level li {
-		background:$white;
+		background:$custom-gray;
 		border-bottom: 0!important;
 		a {
 			font-weight:500;
-			padding-left: 15px;
+			padding-left: 45px;
 		}
 	}
 	.nav-third-level li {
 		border-bottom: 0!important;
 		a {
-	    	padding-left: 45px;
+	    	padding-left: 60px;
 		}
 	}
 	.sidebar-search {
-		background:$white;
+		//background:$white;
+		background:$custom-gray;
 		font-weight:500;
 		padding: 15px;
 		input {
@@ -109,6 +132,9 @@ ul.dropdown-menu {
 			margin:0;
 			border:0;
 			box-shadow:none;
+			&:hover, &:focus {
+				color:$brand-primary;
+			}
 		}
 	}
 }

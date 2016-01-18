@@ -18,6 +18,7 @@ body {
     font-size:$font-size-base;
     a {
         color:$brand-primary;
+        @include transition(all .2s ease);
     }
 }
 

@@ -1,5 +1,6 @@
 header {
-	background:$text-color-lighter;
+	//background:$text-color-lighter;
+	background:$custom-gray;
 	a {
 		color:$text-color;
 		&:hover, &:focus {
@@ -14,9 +15,25 @@ header {
 		height:81px;
 		position:relative;
 		z-index:2;	
-		background:$text-color-lighter;	
+		//background:$text-color-lighter;	
+		background:$custom-gray;
 		border:0;
 		box-shadow:none;
+		a:hover, a:focus {
+			background:$custom-gray;
+			color:$brand-primary;
+		}
+		.open {
+			.dropdown-toggle {
+				background:$custom-gray;
+				color:$brand-primary;
+			}
+		}
+		.dropdown-toggle:hover, .dropdown-hover:focus {
+			background:$custom-gray !important;
+			color:$brand-primary;
+		}
+		
 	}
 	.navbar-left {
 		margin-left:-15px;
